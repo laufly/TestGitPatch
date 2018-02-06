@@ -53,3 +53,26 @@ git apply --check patch，如果执行完该命令之后没有任何输出，表
 检查能否应用成功：# git apply --check  newpatch.patch
 
 打补丁：# git am --signoff < newpatch.patch
+
+
+
+思路:
+
+在 test1 分之修改内容,然后执行 
+```
+git add . 
+git commit -m "a test text file"
+git log   # 用来开看要打patch的提交标识
+
+git format-patch -s xxxx(commit 提交标识)
+```
+生成patch文件,切换到master分之
+
+执行以下代码:
+```
+git apply 0001-a-test-text-file.patch
+
+```
+出现添加的text文件
+
+期间因为是先创建的text文件然后切换的test1分之,所以切回master把text文件删除,然后通过应用 patch 返回来
