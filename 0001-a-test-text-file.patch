@@ -1,0 +1,22 @@
+From 6da87f746133d77d46bbe04aa2d71a18193f0a70 Mon Sep 17 00:00:00 2001
+From: laufly <578939729@qq.com>
+Date: Tue, 6 Feb 2018 14:42:30 +0800
+Subject: [PATCH] a test text file
+
+Signed-off-by: laufly <578939729@qq.com>
+---
+ test.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+diff --git a/test.txt b/test.txt
+new file mode 100644
+index 0000000..6f85a01
+--- /dev/null
++++ b/test.txt
+@@ -0,0 +1 @@
++其他修改内容,用来生成patch的文件.无实际意义.
+\ No newline at end of file
+-- 
+2.7.4
+
