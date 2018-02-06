@@ -45,3 +45,11 @@ git apply --check patch，如果执行完该命令之后没有任何输出，表
 在对比一下，git diff 和git format-patch生成的patch一个重要不同之处，实际使用中会发现git diff一次只会生成一个patch文件，
 
 不管差别了多少个提交，都是一个；而git format-patch是根据提交的节点来的，一个节点一个patch。
+
+应用patch：
+
+先检查patch文件：# git apply --stat newpatch.patch
+
+检查能否应用成功：# git apply --check  newpatch.patch
+
+打补丁：# git am --signoff < newpatch.patch
